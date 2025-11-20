@@ -84,3 +84,24 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize app
   fetchActivities();
 });
+
+        card.querySelector('.activity-description').textContent = activity.description;
+        card.querySelector('.activity-schedule').textContent = `Schedule: ${activity.schedule}`;
+        card.querySelector('.activity-location').textContent = `Location: ${activity.location}`;
+        
+        // Display participants
+        const participantsList = card.querySelector('.participants-list');
+        participantsList.innerHTML = '';
+        if (activity.participants && activity.participants.length > 0) {
+            activity.participants.forEach(email => {
+                const li = document.createElement('li');
+                li.textContent = email;
+                participantsList.appendChild(li);
+            });
+        } else {
+            const li = document.createElement('li');
+            li.textContent = 'No participants yet';
+            li.style.fontStyle = 'italic';
+            li.style.color = '#666';
+            participantsList.appendChild(li);
+        }
