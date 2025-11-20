@@ -165,6 +165,9 @@ footer {
 }
 
 .participants-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 6px 12px;
     margin-bottom: 5px;
     background-color: #f8f9fa;
@@ -176,6 +179,31 @@ footer {
 
 .participants-list li:last-child {
     margin-bottom: 0;
+}
+
+.participant-email {
+    flex-grow: 1;
+}
+
+.delete-icon {
+    cursor: pointer;
+    color: #e74c3c;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0 5px;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+}
+
+.delete-icon:hover {
+    opacity: 1;
+    color: #c0392b;
+    transform: scale(1.2);
+}
+
+.no-participants {
+    justify-content: flex-start !important;
 }
 
 /* Scrollbar styling for participants list */
