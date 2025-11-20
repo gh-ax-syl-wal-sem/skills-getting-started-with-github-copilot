@@ -1,0 +1,9 @@
+{
+    "commitmessagegeneration.enabled": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "text": "Use conventional commit message format with type (feat, fix, docs, style, refactor, test, chore), scope in parentheses if applicable, and a concise description. Example: 'feat(api): add user authentication endpoint'"
+        }
+    ]
+}
